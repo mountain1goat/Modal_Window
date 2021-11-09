@@ -1,0 +1,101 @@
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    /* border: 1px black solid; */
+
+}
+.imgCard{
+    border-radius: 5px;
+}
+.btn-info, .btn-delete {
+    background-color: rgb(163, 193, 228);
+    color: rgb(2, 48, 100);
+    
+    border: rgb(29, 101, 184) 2px solid;
+    border-radius: 7px;
+}
+.btn-info{
+    width: 90px; height: 30px;
+}
+.btn-delete{
+    width: 70px; height: 30px;
+}
+.card{
+    
+    padding: 15px;
+    margin: 5px;
+    display: flex;
+    flex-direction:column;
+    border: 2px rgb(104, 165, 235) solid;
+    border-radius: 7px;
+}
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(156, 156, 156, 0.562);
+    display: flex;
+}
+
+.modal-wrapper.hide {
+    display: none;
+}
+.modal-active {
+    display: flex;
+}
+
+.card-modal {
+    margin: auto;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    width: 570px;
+    height: 270px;
+    background-color: rgb(240, 248, 255);
+    border-radius: 3px;
+}
+
+.card-modal-left, .card-modal-right {
+    width: 50%;
+}
+
+.card-modal-left > img {
+    /* height: 100%; */
+    width: 300px;
+    margin: 50px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: hidden;
+}
+
+.card-modal-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px 40px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color .3s ease-in;
+}
+
+.card-title{
+    margin-top: -20px;
+font-size: 150%;
+}
+
+
+.modal-close:hover {
+    color: red;
+}
