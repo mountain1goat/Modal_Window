@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>poisk</title>
+<link href="poisk.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+	body {
+	font-family: GardensC;
+	}
+	@font-face {
+font-family: 'GardensC';
+src: local('GardensC'),
+url("медиа/fonts/GardensC.otf");
+}
+</style>
+<body>
+	<h2 class="zagolovok" >Результаты поиска кемпингов</h2>
+	<br>
+	<div class="obch">
+		<div></div>
+	<table class="par">
+		<tr>
+	<th class="vyborreg"><h3>Выбор региона:</h3>
+	<select class="reg" name="rayon">
+              <option value="r2">С-Питербург</option>
+              <option value="u1">Челябинск</option>
+              <option value="u3">Рига</option>
+            </select>
+	</th>
+	<th class="vybormar">		
+	<h3>Выбор локации:</h3>
+	<select class="reg" name="rayon">
+              <option value="r1">Дача Поддубного</option>
+              <option value="r2">Лесная поляна</option>
+              <option value="r3">Бочки Диогена</option>
+              <option value="u1">Белая дача</option>
+            </select>
+	</th>	
+		</tr>
+	<tr>
+		<th colspan="2" class="sl">
+		<h3>Количество свободных домов-бочек:</h3>
+	<div class="reg1">000</div>
+        </th>
+	</tr>
+	<tr>
+	<th colspan="2" class="dt">
+	<h3>Даты похода:</h3>
+	<div class="date">
+		<p>Дата начала:</p>
+	<input type="date" class="dn">
+		<p>Дата конца:</p>
+	<input type="date" class="dk">
+	</div>
+	</th>
+	</tr>
+	<tr>
+		<th colspan="2">
+		<a class="totz" href="bochki.html"><button class="bt">
+		Выбрать
+		</button></a>
+		</th>
+	</tr>	
+	</table>
+		<div></div>
+	</div>
+</body>
+</html>

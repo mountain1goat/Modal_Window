@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>bron</title>
+<link href="bro.css" rel="stylesheet" type="text/css">
+<style>
+	body {
+	font-family: GardensC;
+	}
+	@font-face {
+font-family: 'GardensC';
+src: local('GardensC'),
+url("медиа/fonts/GardensC.otf");
+}
+</style>
+</head>
+<body>
+    <h2 class="zagolovok" >Данные о заказе</h2>
+	<br>
+	<div class="obch">
+		<div></div>
+	<table class="par">
+		<tr>
+	<th class="vyborreg"><h3>Выбор региона:</h3>
+        <select class="reg" name="rayon">
+            <option value="r2">С-Питербург</option>
+            <option value="u1">Челябинск</option>
+            <option value="u3">Рига</option>
+          </select>
+	</th>
+	<th class="vybormar">		
+        <h3>Выбор локации:</h3>
+        <select class="reg" name="rayon">
+                  <option value="r1">Дача Поддубного</option>
+                  <option value="r2">Лесная поляна</option>
+                  <option value="r3">Бочки Диогена</option>
+                  <option value="u1">Белая дача</option>
+                </select>
+	</th>	
+		</tr>
+        
+	<tr>
+	<th colspan="2" class="dt">
+	<h3>Даты изоляции:</h3>
+	<div class="date">
+		<p>Дата начала:</p>
+	<input type="date" class="dn">
+		<p>Дата конца:</p>
+	<input type="date" class="dk">
+	</div>
+	</th>
+	</tr>
+    <tr>
+            <th colspan="2" class="sl">
+            <h3>Стоимость:</h3>
+        <div class="reg0">50 000р.</div>
+            </th>
+        </tr>
+  <tr>
+    <th colspan="2">
+      <div class="obusl">
+        <div></div>
+      <fieldset class="usl">
+        <legend><b>Выбор дополнительных услуг</b></legend>
+        <div><input type="checkbox" name="name" id="ff" >
+          Медицинское сопровождение</div>
+        <div><input type="checkbox" name="name" id="ff" >
+            Курьерские услуги
+          </div>
+          <div><input type="checkbox" name="name" id="ff" >
+            Питание 
+            </div> 
+      </fieldset>
+      <div></div>
+    </div>
+    </th>
+  </tr>
+	<tr>
+		<th colspan="2">
+		<a class="totz"><button class="bt">
+		Выбрать
+		</button></a>
+        <br><br>
+		</th>
+	</tr>	
+	</table><div></div>
+</div>
+    <div class="obch2">
+        <div></div>
+    <fieldset class="gr">  
+        <legend><b>Данные о постояльце</b></legend>
+        <div class="dan">
+            <div><p>Фамилия:</p><input type="text" class="reg1"></div>
+            <div><p>Имя:</p><input type="text" class="reg1"></div>
+            <div><p>Отчество:</p><input type="text" class="reg1"></div>
+            <div><p>Дата рождения:</p><input type="date" class="reg3"></div>
+            <div><p>Номер документа:</p><input type="text" class="reg2"></div>
+        </div> 
+    </fieldset>
+    <div></div>
+</div>
+
+<div class="obkom">
+<div></div>
+  <div class="kom">
+    <button class="otz">Добавить постояльца</button>
+    <button class="otz">Удалить постояльца</button>
+    </div>
+<div></div>
+</div>
+
+<div class="obotp">
+  <div></div>
+    <table class="otp">
+
+     <tr><th><br> <label>Итоговая стоимость:</label></th>
+      <th><label class="sum">50 000 p.</label></th>
+     </tr>
+     <tr> 
+       <th colspan="2"><a href="AaH.html"><button class="otpr">Забронировать</button></a>  
+       </th> </tr>
+    </table>
+  <div></div>
+  </div>
+</body>    
+</html>

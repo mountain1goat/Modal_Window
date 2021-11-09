@@ -1,0 +1,67 @@
+@charset "utf-8";
+.zagolovok {
+	margin-left: 10px;
+}
+:root {
+	--cher: #000;
+	--bel: #fff;
+	--tzel: rgb(44, 163, 14);
+    --jzel: #96da1a;
+    --zel: rgb(39, 231, 21);
+	--szel: rgb(54, 175, 115);
+	--svzel: #ebfed5;
+	--svsinzel: #bdf8db;
+	--tser: rgba(73,73,73,0.80);
+	--svzotz: rgba(45, 146, 121, 0.781);
+	
+}
+.obch {
+	display: grid;
+	grid-template-columns: auto 500px auto;
+	grid-template-rows: 1fr;
+}
+.par {
+	width: 500px;
+	border: solid 1.5px var(--tzel);
+	background: var(--svzel);
+}
+.reg {
+	border: 1px solid var(--zel);
+	color: var(--cher);
+	background-color: var(--svsinzel);
+	margin: 0 5px;
+	font-size: 105%;
+}
+.reg1 {
+    width: 50px;height: 30px;
+    border: 1px solid var(--zel);
+	color: var(--cher);
+	background-color: var(--svsinzel);
+	margin: 0 45%;
+	font-size: 105%;
+}
+.dk, .dn {
+	border: 1px solid var(--zel);
+	color: var(--cher);
+	background-color: var(--svsinzel);
+	margin: 0 5px;
+	font-size: 105%;
+}
+.date {
+	width: 150px; height: 150px;
+	background: var(--szel);
+	margin: 10px auto;
+	padding: 10px;
+}
+.totz {
+    color: var(--bel);
+    text-decoration: none;
+}
+.bt{
+	background-color: var(--tzel);
+	color: var(--bel);
+	border-radius: 5px;
+	width: 100px;height: 50px;
+    font-size: 107%;
+}
+

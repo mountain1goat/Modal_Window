@@ -1,0 +1,117 @@
+@charset "utf-8";
+body {
+    font-family: 'GardensC';
+}
+:root {
+	--cher: #000;
+	--bel: #fff;
+	--tzel: rgb(44, 163, 14);
+    --jzel: #96da1a;
+    --zel: rgb(39, 231, 21);
+	--szel: rgb(54, 175, 115);
+	--svzel: #ebfed5;
+	--svsinzel: #bdf8db;
+	--tser: rgba(73,73,73,0.80);
+	--svzotz: rgba(45, 146, 121, 0.781);
+	
+}
+
+.d1 > label > a {
+ color: var(--cher); text-decoration: none;
+ font-size: 110%;
+}
+.akcyy{
+	margin: 15px auto;
+	border: dotted var(--bel) 3px;
+	padding: 5px 0;
+}
+
+.pl {
+    font-size: 125%;
+    font-weight: bold;	
+}
+.mbt {
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: auto 130px auto;
+    grid-template-rows: auto;
+}
+.br{
+    font-size: 105%;
+    color: var(--cher);
+    text-decoration: none;
+	background-color: var(--zel);
+	border-radius: 5px;
+	width: 130px;height: 50px;
+}
+.akcyy > div {
+	margin: 0 10px;
+	padding: 0;
+	text-align: center;
+}
+.akc1 {
+	margin: 0 5px;
+}
+.akcp {
+    font-size: 80%;
+}
+.lam {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto 250px 50px auto;
+    grid-template-rows: auto;
+}
+.label {
+    width: 250px;
+}
+.zo {
+    background-color: var(--svzel);
+    width: 50px;
+}
+@media (min-width: 1000px) {
+    .obch {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+    }
+    .vn {
+        display: grid;
+        grid-template-columns: auto 345px;
+        grid-template-rows: auto;
+    }
+	#akcyy {
+		display: grid;
+	grid-template-columns: auto 215px 255px 0 0 215px 255px auto;
+	grid-template-rows: 1fr;
+	}
+}
+@media (min-width: 650px) and (max-width: 1000px) {
+	.obch {
+        display: grid;
+        grid-template-columns: auto 345px auto;
+        grid-template-rows: auto auto;
+    }
+    #akcyy {
+		display: grid;
+	grid-template-columns: auto 215px 255px auto;
+	grid-template-rows: 1fr 1fr;
+	}
+}
+@media (min-width: 300px) and (max-width: 650px) {
+    .obch {
+        display: grid;
+        grid-template-columns: auto 345px auto;
+        grid-template-rows: auto auto;
+    }
+}
+body {
+    background-color: var(--svsinzel);
+    font-family: GardensC;
+}
+.vn {
+    padding: 10px;
+    background-color: var(--szel);
+}
+.fr {
+    margin-top: 10px;
+}

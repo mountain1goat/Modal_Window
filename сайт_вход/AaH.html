@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AaH</title>
+<link href="AaH.css" rel="stylesheet" type="text/css">
+</head>
+<style>
+	body {
+	font-family: GardensC;
+	}
+	@font-face {
+font-family: 'GardensC';
+src: local('GardensC'),
+url("медиа/fonts/GardensC.otf");
+}
+</style>
+<body>
+	<header>
+	<p><img src="медиа/images/wooden barrel for logo/logo5.png" width="80px" height="80px" alt="" class="logo"></p>
+		<div></div>
+	
+	<div class="menu" id="m">
+		
+		<p><a href="#akcee">Акции</a></p>
+		<p><a href="#poisk">Поиск</a></p>
+		<p><a href="bro.html">Управление бронированием</a></p>
+		
+	</div>
+
+	<div class="entry">
+		<h3 id="name"></h3>
+		<button class="btn">Вход</button>
+	</div>
+
+	</header>
+
+	<div class="modal-wrapper hide">
+        <article class="card-modal">
+
+            <span class="modal-close">&times;</span>
+			<h3 id="hEntry">Авторизация</h3>
+            <div class="card-modal-center">
+                <input type="text" placeholder="Введите логин" id="userName">
+				<input type="password" placeholder="Введите пароль" id="userPass">
+                <button id="btnEntry">Войти</button>
+
+            </div>      
+        
+		</article>
+    </div>
+
+
+	<br><br>
+	<hr>
+	<br>
+	<aside class="foto" id="foto">
+		<h1>Alone at home</h1>
+		<p>Главная цель компании – сделать дни вынужденной самоизоляции максимально комфортными и безопасными для наших клиентов.</p>
+		<p>Девиз компании: Комфортно для Вас – безопасно для общества.</p><p>+7 (909) 555 55 55</p>
+	<a href="#otzyvy" class="totz" id="poisk"><button class="nav-right">Отзывы</button></a>
+	</aside>
+	<br>
+	<div class="sredpo">
+	<div></div>
+	
+	<fieldset class="poisk" >
+		<legend><b>Поиск</b></legend>
+		<div id="poa">
+          <div><p>Выберите район</p>
+			<select class="reg" name="rayon">
+              <option value="r1">Москва</option>
+              <option value="r2">С-Питербург</option>
+              <option value="r3">Екатеринбург</option>
+              
+              <option value="u1">Челябинск</option>
+              <option value="u2">Киев</option>
+              <option value="u3">Рига</option>
+            </select></div>
+				<div><p>Количество участников</p>
+					<input type="number" min="1" max="5" class="kolvo"  id="kolvo" step="1" value="0">
+				</div><div>
+			<p>Дата заселения</p>
+			<input type="date" class="dk">
+				</div><div>
+			<p>Дата выселения</p>
+			<input type="date" class="dk">
+			  </div>
+		</div><div class="poa2">
+		
+			   <a href="poisk.html" class="totz"><button class="knpo">Поиск</button></a>
+        
+		</div>
+		</fieldset>	
+	<div></div>
+	</div>
+	<h3 class="zagolovok">Алгоритм бронирования</h3>
+	<div class="shagy" id="shagy">
+		<div></div>
+		
+	<div class="sh">
+		<button class="shc1">1</button><br>
+		<img src="медиа/images/date.svg" width="50px" height="50px" alt="">
+		<p>Выбрать даты и место самоизоляции</p>
+	</div>
+	<div class="sh">
+		<button class="shc2">2</button><br>
+		<img src="медиа/images/count.svg" width="50px" height="50px" alt="">
+		<p>Выбрать количество проживающих</p>
+		</div>
+		
+	<div class="sh">
+		<button class="shc3">3</button><br>
+		<img src="медиа/images/region.svg" width="50px" height="50px" alt="">
+		<p>Выбрать желаемый кемпинг, соответствующий условиям выше</p>
+		</div>
+		<div></div><div></div>
+	<div class="sh">
+		<button class="shc4">4</button><br>
+		<img src="медиа/images/zone.svg" width="50px" height="50px" alt="">
+		<p>Выбрать понравившийся дом-бочку на территории кемпинга</p>
+		</div>
+		
+	<div class="sh">
+		<button class="shc5">5</button><br>
+		<img src="медиа/images/dop.svg" width="50px" height="50px" alt="">
+		<p>Определить перечень дополнительных услуг</p>
+		</div>
+		
+	<div class="sh">
+		<button class="shc6" id="akcee">6</button><br>
+		<img src="медиа/images/buy.svg" width="50px" height="50px" alt="">
+		<p>Оформить заказ</p>
+		</div>
+		<div></div>
+	</div>
+	<h3 class="zagolovok" >Акции</h3>
+<div class="akcyy" id="akcyy">
+		<div></div>
+	<div class="akc1"><div class="akc1i">
+		<img src="медиа/images/promotions/promotion1.jpg" alt="" widht="255px" height="130px">
+		<p><b>Акция</b></p>
+		<p class="akcp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis perferendis doloribus quisquam, saepe numquam, deleniti omnis hic esse! Unde, quisquam.</p>
+		<details>Текст об акции</details><br>
+		</div>
+  </div>
+	<div class="akc2"><div class="akc2i"><img src="медиа/images/promotions/promotion2.jpg" alt="" widht="255px" height="130px">
+		<p><b>Акция</b></p>
+		<p class="akcp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis perferendis doloribus quisquam, saepe numquam, deleniti omnis hic esse! Unde, quisquam.</p>
+		<details>Текст об акции</details><br>
+		</div>
+		</div>
+	<div></div><div></div>
+	<div class="akc3"><div class="akc2i"><img src="медиа/images/promotions/promotion1.jpg" alt="" widht="255px" height="130px">
+		<p><b>Акция</b></p>
+		<p class="akcp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis perferendis doloribus quisquam, saepe numquam, deleniti omnis hic esse! Unde, quisquam.</p>
+		<details>Текст об акции</details><br>
+		</div>
+		</div>
+	<div class="akc4"><div class="akc1i"><img src="медиа/images/promotions/promotion2.jpg" alt="" widht="255px" height="130px">
+		<p><b>Акция</b></p>
+		<p class="akcp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis perferendis doloribus quisquam, saepe numquam, deleniti omnis hic esse! Unde, quisquam.</p>
+		<details>Текст об акции</details><br>
+		</div>
+		</div>
+		<div></div>
+	</div>
+	<div class="sredzag">
+	<div></div>
+	<h3 class="zagolovok">Подписка на закрытые акции</h3>
+	<div></div>
+	</div>
+	<div class="sredpodp">
+		<div></div>
+	<div class="podpza" id="podpza">
+		<div></div>
+	<input type="email" class="em" id="em" placeholder="E-mail">
+		<div></div>
+	<button class="podpiska">Подписаться</button>
+		<div></div>
+	</div>
+		<div></div>
+	</div>
+	<h3 class="zagolovok" id="otzyvy">Отзывы</h3>
+	<hr>
+	<div class="otz" id="otz">
+		<div></div>
+	<div class="otz1">Елена<br>
+		Понравилось оформление домов-бочек и спектр услуг! Для семьи из 4-х человек все условия, особенно хотелось отметить качество медицинских услуг! 
+		Спасибо большое! Однозначно рекомендую!<hr>
+</div>
+		<div></div><div></div>
+	<div class="otz2">Петр Иванович<br>
+		Всё очень понравилось. 
+		Изолировались вдвоем с супругой, порадовали цены (особенно семейные акции). Условия проживания на высоком уровне. Изоляция прошла с пользой!<hr> 
+		
+</div>
+		<div></div><div></div>
+	<div class="otz3">Олег<br>
+		Решил совместить приятное с полезным. Отметили в изоляции очередную годовщину с супругой, качество услуг отличное и главное вокруг никого))) Побольше бы таких проектов Рекомендую!<hr>
+		
+</div>
+		<div></div>
+	</div>
+	<br><br>
+	<div class="podval">
+	<div></div>
+	<div class="podtel">
+		<p>Телефон: +7 (909) 555 55 55</p>
+		</div>
+		<div></div>
+	<div class="podset">
+		<div class="fset"><a href="https://www.facebook.com/"></a></div>
+		<div class="gset"><a href="https://www.google.ru/"></a></div>
+		<div class="pset"><a href="https://www.pinterest.ru/"></a></div>
+		<div class="tset"><a href="https://twitter.com/"></a></div>
+		</div>
+		<div></div>
+	<div class="podnav">
+	<p><a href="#akcee" class="totz">Акции</a></p>
+	<p><a href="#poisk" class="totz">Поиск</a></p>
+	<p><a href="bron.html" class="totz">Управление бронированием</a></p>	
+		</div>
+	</div>
+	<button class="verh" ><a href="#top" class="tv">Наверх</a></button>
+	
+<script src="AaH.js">
+// (function() {
+// 	var button = document.getElementById('toggle-menu');
+// 	button.addEventListener('click', function(event) {
+// 		event.preventDefault();
+// 		var menu = document.getElementById('main-menu');
+// 		menu.classList.toggle('is-open');
+// 	});
+// })();	
+</script>
+</body>
+</html>
