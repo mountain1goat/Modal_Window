@@ -1,0 +1,86 @@
+body {
+    background-color: rgb(127, 214, 255);
+}
+.cont {
+    margin: 30px auto;
+    width: 980px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 230px 230px;
+    padding: 10px;
+    background-color: rgb(127, 172, 255);
+    border-radius: 10px;
+}
+.imgCard{
+    border-radius: 5px;
+}
+
+.card{
+    padding: 15px;
+    margin: 5px;
+    display: flex;
+    flex-direction:column;
+    border: 2px rgb(104, 165, 235) solid;
+    border-radius: 7px;
+}
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(156, 156, 156, 0.562);
+    display: flex;
+}
+
+.modal-wrapper.hide {
+    display: none;
+}
+.modal-active {
+    display: flex;
+}
+
+.card-modal {
+    margin: auto;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 600px; height: 435px;
+    background-color: rgb(201, 229, 253);
+    border-radius: 10px;
+}
+
+.card-modal-top {
+    position: absolute;
+    top: 20px; left: 20px;
+    width: 580px; height: 350px;
+    border-radius: 3px;
+}
+.last{
+    left: -50px;
+}
+.next{
+    right: -50px;
+}
+.last, .next{
+    position: absolute;
+    top: 200px;
+    width: 33px; height: 33px;
+    font-size: 30px;
+    background-color: rgb(209, 248, 235);
+    border-radius: 10px;
+}
+.last>label, .next>label{
+    margin: 5px;
+}
+.card-modal-buttom {
+    position: absolute;
+    bottom: 10px; left: 30px;
+}
+.card-title{
+    margin-top: -20px;
+    font-size: 150%;
+}
+
