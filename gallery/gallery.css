@@ -15,7 +15,14 @@ body {
     border-radius: 5px;
 }
 
+#backCards{
+    background-color: rgba(255, 255, 255, 0);
+    border: rgb(62, 105, 184) 1px solid;
+    border-radius: 7px;
+    color: rgb(0, 10, 27);
+}
 .card{
+    position: relative;
     padding: 15px;
     margin: 5px;
     display: flex;
@@ -58,6 +65,19 @@ body {
     width: 580px; height: 350px;
     border-radius: 3px;
 }
+.delete {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color .3s ease-in;
+    color: rgba(211, 240, 255, 0.884);
+}
+.delete:hover {
+    color: red;
+}
+
 .last{
     left: -50px;
 }
@@ -83,4 +103,5 @@ body {
     margin-top: -20px;
     font-size: 150%;
 }
+
 
