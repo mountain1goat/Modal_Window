@@ -31,57 +31,102 @@ let cards=[
     }
 ]
 let cardsCount=document.querySelector('.cont');
+let deletedCards;
+let numbSl;
+let btnPrev = document.querySelector('.last');
+let btnNext = document.querySelector('.next');
 createManyCards(cards,cardsCount);
 
 function createManyCards(array,cont){
+    deletedCards = loadFromLocalStorage();
+    cont.innerHTML = '';
     array.forEach(item => {
-        cont.insertAdjacentHTML("beforeend",createCard(item))
-        localStorage.setItem(`${item.id}`, JSON.stringify(item))
+       if (!deletedCards.includes(item.id)){
+        cont.insertAdjacentHTML("beforeend",createCard(item));
+       }
     });
 }
-
-// function localEntry(arr){
-//     arr.forEach(item=>{
-//         localStorage.setItem(`${item.id}`, createCard(item))
-//     })
-// }
 
 function createCard({id, image}){
     return`
     <article class='card' id=${id} style="background-image: url('${image}'); background-size: cover; width=100%;">
+    <span class="delete" id='id${id}'>&times;</span>
     </article>
     `
 }
 
 const modalWrapper=document.querySelector(".modal-wrapper")
-const lastbtn=document.querySelector('.last');
-const nextbtn=document.querySelector('.next');
 
-document.querySelectorAll('.card').forEach(btn=>{
-    btn.addEventListener('click',showInfo)
-});
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('delete')) {
+        deleteCard(e);
+    }
+    if (e.target.classList.contains('card')) {
+        showInfo(e);
+    }
+})
 
 function showInfo(e){
    modalWrapper.classList.remove('hide');
-   showCard(cards,e)
-//lastbtn.addEventListener('click', showLast) 
+   numbSl = e.target.closest('article.card').id;
+    showCard(cards, e);
+}
+
+deletedCards = loadFromLocalStorage();
+
+function deleteCard(e) {
+    e.target.closest('article.card').remove();
+
+    deletedCards.push(e.target.closest('article.card').id);
+
+    localStorage.setItem('deletedCards', JSON.stringify(deletedCards));
 }
 
 function showCard(array,e){
-   let {image, head} = array.find(item=>item.id===e.target.closest("article.card").id)
+   let {image, head} = array.find(item=>item.id == numbSl)
    document.querySelector(".card-modal-top").style=`background-image: url('${image}'); background-size: cover; width=100%;`;
    document.querySelector(".card-modal-buttom>h3>a").textContent=head;
+   numberSlide.textContent = numbSl + '/' + cards.length;
+
+   if (numbSl === 1) {
+       btnPrev.disabled = true;
+   }
+   else {
+       btnPrev.disabled = false;
+   }
+   if (numbSl === cards.length) {
+       btnNext.disabled = true;
+   }
+   else {
+       btnNext.disabled = false;
+   }
 }
 
-function showLast(arr,e){
-    arr.forEach(item=>{
-        if(item.id===e.target.closest("article.card").id) {
-            let {image, head} = localStorage.getItem(item)
-            document.querySelector(".card-modal-top").style=`background-image: url('${image}'); background-size: cover; width=100%;`;
-            document.querySelector(".card-modal-buttom>h3>a").textContent=head;
-        }
-    })
+btnPrev.addEventListener('click', (e) => {
+    if (numbSl >= 1) {
+        --numbSl;
+        showCard(cards, e);
+    }
+});
+
+btnNext.addEventListener('click', (e) => {
+    if (numbSl <= cards.length) {
+        numbSl++;
+        showCard(cards, e);
+    }
+});
+
+function loadFromLocalStorage() {
+    return JSON.parse(localStorage.getItem('deletedCards')) || [];
 }
+
+const btnShow = document.getElementById('backCards');
+
+btnShow.addEventListener('click', () => {
+    localStorage.removeItem('deletedCards');
+    createManyCards(cards, cardsCount);
+})
+
 
 modalWrapper.addEventListener("click",e=>{
     if(e.target===e.currentTarget){
